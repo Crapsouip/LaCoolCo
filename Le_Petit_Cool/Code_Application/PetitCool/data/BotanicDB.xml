@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	BIOBOT APPLICATION VERSION_1.0
+	@author Daman Maximilien	25/08/2014
+-->
+<BotanicDB version="1.0">
+	<Page id="0" Title="SearchPage">
+		<Background img="Loading.svg" width="640" heigth="480"/>
+		<Objects>
+			<PageChange>
+				<UpPage symbol="rect" posX="320" posY="15" sizeX="50" sizeY="20" topage="99">
+					<Text posX="320" posY="15" fontsize="24">HOME</Text>
+				</UpPage>
+			</PageChange>
+			<DateTime>	
+				<Numeric posX="320" posY="465" fontsize="36" />
+			</DateTime>
+			<SearchZone posX="320" posY="240" size="120" fill="255">
+				<TextArea fontsize="24" color="0" />
+			</SearchZone>
+		</Objects>
+	</Page>
+	
+	<Page id="1" Title="ResultPage">
+		<Background img="Loading.svg" width="640" heigth="480"/>
+		<Objects>
+			<PageChange>
+				<UpPage symbol="rect" posX="40" posY="15" sizeX="50" sizeY="20" topage="0">
+					<Text posX="40" posY="15" fontsize="24">Search</Text>
+				</UpPage>
+				<DownPage symbol="rect" posX="600" posY="15" sizeX="50" sizeY="20" topage="99">
+					<Text posX="600" posY="15" fontsize="24">Home</Text>
+				</DownPage>
+			</PageChange>
+			<DateTime>	
+				<Numeric posX="320" posY="465" fontsize="36" />
+			</DateTime>
+			<Tableau posX="320" posY="160">
+				<Case symbol="rect" sizeX="160" sizeY="60" line="1" column="1">
+					<Text fontsize="24" color="0">Name :</Text>
+				</Case>
+				<Case symbol="square" size="80" line="2" column="1">
+					<Text fontsize="24" color="0">Info 1 :</Text>
+				</Case>
+				<Case symbol="square" size="80" line="2" column="2">
+					<Text fontsize="24" color="0">Info 2 :</Text>
+				</Case>
+			</Tableau>
+		</Objects>
+	</Page>
+	
+	<Plants>
+	<!-- AJOUTER ICI LE RESULTAT DU FORMATTAGE BATCH -->
+		<!--<Plante name="Ginkgo Biloba">-->
+		<Plante name="Gin">
+			<Classification family="Ginkgoaceae" order="Ginkgoales" class="Ginkgoopsida" division="Ginkgophyta" superdiv="Spermatophyta" subking="Tracheobionta" />
+			<Information />
+		</Plante>
+	</Plants>
+</BotanicDB>

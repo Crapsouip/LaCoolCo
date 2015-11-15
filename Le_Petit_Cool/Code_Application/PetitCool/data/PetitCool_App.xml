@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BiobotApplication version="1.0">
+<!--
+	PETIT COOL APPLICATION VERSION_1.0
+	@author Daman Maximilien	18/04/2015
+-->
+	<Initialisation>
+		<Update data="500" graph="1000"/>
+		<Window width="360" height="567" fps="3"/>			<!--	720*1134	-->
+		<Background img="Background\BackgroundClean.png" width="360" heigth="640"/>
+	</Initialisation>
+	
+	<Page id="0" Title="GodModeC">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Hamburger.png"	 	pos="0" 	topage="2"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="1"	/>
+			<PageChange ico="Button\General\Stats.png" 			pos="2"  	topage="1"	/>
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="1" Title="MainC">
+		<Background img="Background\Background.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Hamburger.png"	 	pos="0" 	topage="2"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="1"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\SeasonMain.png"		pos="3"  	topage="1"	/>
+				<PageChange ico="SeasonMode"						pos="49"  	topage="10"	/>
+				<PageChange ico="Button\General\Change.png"						pos="8"  	action="SEASON:MODE"	/>
+			<PageChange ico="Button\General\LightMain.png" 		pos="9"  	topage="10"	/>
+				<PageChange ico="IntLightMode" 						pos="10"  	topage="1"	/>
+				<DataShow id="17"	font="1" 	fontsize="20"		pos="50"	text="%" />
+				<DataShow id="7"	font="1" 	fontsize="20"		pos="51"	text="%" />
+			<PageChange ico="Button\General\TemperMain.png" 	pos="15"  	topage="3"	/>
+				<DataShow id="-7"	font="2" 	fontsize="20"		pos="16"	text="°"  color="#D6DA29" />
+				<DataShow id="8"	font="1" 	fontsize="20"		pos="52"	text="°" />
+				<DataShow id="11"	font="1" 	fontsize="20"		pos="53"	text="°" />
+			<PageChange ico="Button\General\HumidityMain.png"	pos="21"  	topage="4"	/>
+				<DataShow id="-10"	font="2" 	fontsize="20"		pos="22"	text="%"  color="#D6DA29" />
+				<DataShow id="10"	font="1" 	fontsize="20"		pos="54"	text="%"/>
+				<DataShow id="13"	font="1" 	fontsize="20"		pos="55"	text="%"/>		
+			<PageChange ico="Button\General\PumpMain.png"		pos="27"  	topage="1"	/>
+				<PageChange ico="PumpMode"							pos="56"  	topage="1"	/>
+				<PageChange ico="Button\General\Change.png"			pos="32"  	action="P:M"	/>			
+			<PageChange ico="Button\General\WaterLevelMain.png"	pos="33"  	topage="1"	/>
+				<DataShow	font="2"	fontsize="20"		pos="34"  	text="1,9 L"	color="#D6DA29"/>
+				<DataShow	font="1"	fontsize="20"		pos="57"  	text="18 days remaining"	/>
+			<PageChange ico="Button\General\SettingsMain.png"	pos="39"  	topage="1"	/>
+				<PageChange ico="Button\General\Bluetooth_on.png"	pos="40"  	topage="1"	/>
+				<PageChange ico="Button\General\Update_off.png"	pos="41"  	topage="1"	/>
+				<PageChange ico="Button\General\Reset_off.png"	pos="42"  	topage="1"	/>
+				<PageChange ico=""	pos="44"  	topage="6"	/>
+				<DataShow	font="1"	fontsize="20"		pos="43"  	text="°C"	color="#D6DA29"	/>
+				<DataShow	font="1"	fontsize="20"		pos="44"  	text="°F"	color="#333333"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="1"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="#D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="2" Title="MenuC">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="2"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="2"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Season"/>
+				<PageChange ico="" 									pos="58"  	topage="2"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="2"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Luminosity"/>
+				<PageChange ico="" 									pos="59"  	topage="10"	/>
+				<PageChange ico="Button\General\Change.png" 									pos="14"  	topage="10"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="3"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="60"	text="Temperature"/>
+				<PageChange ico="Button\General\Change.png" 									pos="20"  	topage="3"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="4"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="61"	text="Air Humidity"/>
+				<PageChange ico="Button\General\Change.png" 									pos="26"  	topage="4"	/>
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="2"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Watering"/>
+				<PageChange ico="" 									pos="62"  	topage="2"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="2"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Tank Level"/>
+				<PageChange ico="" 									pos="63"  	topage="2"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="2"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="64"	text="Settings"/>
+				<PageChange ico="" 									pos="64"  	topage="2"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="2"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at " color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="3" Title="TempGenC"	 >
+			<Background img="Background\BackgroundTempMenu.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="2"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="3"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Temperature Settings" color="D6DA29"/>
+				<PageChange ico="" 									pos="58"  	topage="3"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="3"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="3"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="4"	/>
+			<PageChange ico="Background\GraphSmall.png" 				pos="79"  	topage="3"	/>
+			<Graph id="-1003" pos="79" />
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="3"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="12"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="12"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="3"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Internal Temperature"/>
+				<PageChange ico="" 									pos="63"  	topage="3"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="3"	/>
+				<PageChange ico="Button\General\Moins.png" 		pos="40"  	action="C:TEMP:-"	/>
+				<DataShow id="-7"	font="2" 	fontsize="20"		pos="65"	text="°C"  color="#D6DA29" />
+				<PageChange ico="Button\General\Plus.png" 			pos="43"  	action="C:TEMP:+"	/>
+				<PageChange ico="Button\General\BackMenu.png" 		pos="44"  	action="C:TEMP:S"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="3"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="4" Title="HumGenC"	>
+			<Background img="Background\BackgroundHumMenu.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="2"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="4"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Humidity Settings" color="D6DA29"/>
+				<PageChange ico="" 									pos="58"  	topage="4"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="4"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="3"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="2"	/>
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="4"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="12"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="12"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="4"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Internal Humidity"/>
+				<PageChange ico="" 									pos="63"  	topage="4"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="4"	/>
+				<PageChange ico="Button\General\Moins.png" 		pos="40"  	action="C:HUM:-"	/>
+				<DataShow id="-10"	font="2" 	fontsize="20"		pos="65"	text="%"  color="#D6DA29" />
+				<PageChange ico="Button\General\Plus.png" 			pos="43"  	action="C:HUM:+"	/>
+				<PageChange ico="Button\General\BackMenu.png" 		pos="44"  	action="C:HUM:S"	/>				
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="4"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="5" Title="GodModeF">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Hamburger.png"	 	pos="0" 	topage="7"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="5"	/>
+			<PageChange ico="Button\General\Stats.png" 			pos="2"  	topage="6"	/>
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="6" Title="MainF">
+		<Background img="Background\Background.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Hamburger.png"	 	pos="0" 	topage="7"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="6"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\SeasonMain.png"		pos="3"  	topage="6"	/>
+				<PageChange ico="SeasonMode"						pos="49"  	topage="11"	/>
+				<PageChange ico="Button\General\Change.png"						pos="8"  	action="SEASON:MODE"	/>
+			<PageChange ico="Button\General\LightMain.png" 		pos="9"  	topage="11"	/>
+				<PageChange ico="IntLightMode" 						pos="10"  	topage="6"	/>
+				<DataShow id="16"	font="1" 	fontsize="20"		pos="50"	text="%" />
+				<DataShow id="7"	font="1" 	fontsize="20"		pos="51"	text="%" />
+			<PageChange ico="Button\General\TemperMain.png" 	pos="15"  	topage="8"	/>
+				<DataShow id="-107"	font="2" 	fontsize="20"		pos="16"	text="°"  color="#D6DA29" />
+				<DataShow id="9"	font="1" 	fontsize="20"		pos="52"	text="°" />
+				<DataShow id="12"	font="1" 	fontsize="20"		pos="53"	text="°" />
+			<PageChange ico="Button\General\HumidityMain.png"	pos="21"  	topage="9"	/>
+				<DataShow id="-10"	font="2" 	fontsize="20"		pos="22"	text="%"  color="#D6DA29" />
+				<DataShow id="10"	font="1" 	fontsize="20"		pos="54"	text="%"/>
+				<DataShow id="13"	font="1" 	fontsize="20"		pos="55"	text="%"/>		
+			<PageChange ico="Button\General\PumpMain.png"		pos="27"  	topage="6"	/>
+				<PageChange ico="PumpMode"							pos="56"  	topage="6"	/>
+				<PageChange ico="Button\General\Change.png"			pos="32"  	action="PUMP:MODE"	/>			
+			<PageChange ico="Button\General\WaterLevelMain.png"	pos="33"  	topage="6"	/>
+				<DataShow	font="2"	fontsize="20"		pos="34"  	text="½ gal"	color="#D6DA29"/>
+				<DataShow	font="1"	fontsize="20"		pos="57"  	text="18 days remaining"	/>
+			<PageChange ico="Button\General\SettingsMain.png"	pos="39"  	topage="6"	/>
+				<PageChange ico="Button\General\Bluetooth_on.png"	pos="40"  	topage="6"	/>
+				<PageChange ico="Button\General\Update_off.png"	pos="41"  	topage="6"	/>
+				<PageChange ico="Button\General\Reset_off.png"	pos="42"  	topage="6"	/>
+				<PageChange ico=""	pos="43"  	topage="1"	/>
+				<DataShow	font="1"	fontsize="20"		pos="43"  	text="°C"	color="#333333"	/>
+				<DataShow	font="1"	fontsize="20"		pos="44"  	text="°F"	color="#D6DA29"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="6"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="#D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="7" Title="MenuF">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="6"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="7"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="7"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Season"/>
+				<PageChange ico="" 									pos="58"  	topage="7"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="7"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Luminosity"/>
+				<PageChange ico="" 									pos="59"  	topage="11"	/>
+				<PageChange ico="Button\General\Change.png" 									pos="14"  	topage="11"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="8"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="60"	text="Temperature"/>
+				<PageChange ico="Button\General\Change.png" 									pos="20"  	topage="8"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="9"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="61"	text="Air Humidity"/>
+				<PageChange ico="Button\General\Change.png" 									pos="26"  	topage="9"	/>
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="7"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Watering"/>
+				<PageChange ico="" 									pos="62"  	topage="7"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="7"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Tank Level"/>
+				<PageChange ico="" 									pos="63"  	topage="7"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="7"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="64"	text="Settings"/>
+				<PageChange ico="" 									pos="64"  	topage="7"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="7"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at " color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="8" Title="TempGenF"	 >
+			<Background img="Background\BackgroundTempMenu.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="6"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="8"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="8"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Temperature Settings" color="D6DA29"/>
+				<PageChange ico="" 									pos="58"  	topage="8"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="8"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="7"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="9"	/>
+			<PageChange ico="Background\GraphSmall.png" 				pos="79"  	topage="8"	/>
+			<Graph id="-1003" mode="F" pos="79" />
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="8"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="13"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="13"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="8"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Internal Temperature"/>
+				<PageChange ico="" 									pos="63"  	topage="8"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="8"	/>
+				<PageChange ico="Button\General\Moins.png" 			pos="40"  	action="C:TEMP:-"	/>
+				<DataShow id="-107"	font="2" 	fontsize="20"		pos="65"	text="°F"  color="#D6DA29" />
+				<PageChange ico="Button\General\Plus.png" 			pos="43"  	action="C:TEMP:+"	/>
+				<PageChange ico="Button\General\BackMenu.png" 		pos="44"  	action="C:TEMP:S"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="8"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="9" Title="HumGenF">
+			<Background img="Background\BackgroundHumMenu.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="6"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="9"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="9"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="58"	text="Humidity Settings"	color="D6D129"/>
+				<PageChange ico="" 									pos="58"  	topage="9"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="9"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="8"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="9"	/>
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="9"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="13"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="13"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="9"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Internal Humidity"/>
+				<PageChange ico="" 									pos="63"  	topage="9"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="9"	/>
+				<PageChange ico="Button\General\Moins.png" 		pos="40"  	action="C:HUM:-"	/>
+				<DataShow id="-10"	font="2" 	fontsize="20"		pos="65"	text="%"  color="#D6DA29" />
+				<PageChange ico="Button\General\Plus.png" 			pos="43"  	action="C:HUM:+"	/>
+				<PageChange ico="Button\General\BackMenu.png" 		pos="44"  	action="C:HUM:S"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="9"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+
+	<Page id="10" Title="LumGenC">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="10"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="10"	/>	
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="Luminosity Settings"	color="D6DA29"/>
+				<PageChange ico="" 									pos="49"  	topage="10"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="10"	/>
+			
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="10"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="4"	/>
+			<PageChange ico="Background\GraphSmall.png" 				pos="79"  	topage="10"	/>
+			<Graph id="-1003" mode="F" pos="79" />
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="10"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="10"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="20"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="10"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Mode"/>
+				<PageChange ico="" 									pos="63"  	topage="10"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="38"  	topage="10"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="10"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="64"	text="Set Spectrum"/>
+				<PageChange ico="" 									pos="64"  	topage="10"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="44"  	topage="18"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="10"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>	
+		</Objects>
+	</Page>
+	
+	<Page id="11" Title="LumGenF">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="6"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="11"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="11"	/>	
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="58"	text="Luminosity Settings"/>
+				<PageChange ico="" 									pos="58"  	topage="11"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="9"  	topage="11"	/>
+			
+			<PageChange ico="Button\General\Temperature.png" 	pos="15"  	topage="11"	/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="21"  	topage="4"	/>
+			<PageChange ico="Background\GraphSmall.png" 				pos="79"  	topage="11"	/>
+			<Graph id="-1003" mode="F" pos="79" />
+			<PageChange ico="Button\General\Pump.png" 			pos="27"  	topage="11"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="62"	text="Manage Sensor"/>
+				<PageChange ico="" 									pos="62"  	topage="11"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="32"  	topage="21"	/>
+			<PageChange ico="Button\General\WaterLevel.png" 	pos="33"  	topage="11"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="63"	text="Set Mode"/>
+				<PageChange ico="" 									pos="63"  	topage="11"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="38"  	topage="11"	/>
+			<PageChange ico="Button\General\Settings.png" 		pos="39"  	topage="11"	/>
+				<DataShow 	font="1"	fontsize="20"	center="1"	pos="64"	text="Set Spectrum"/>
+				<PageChange ico="" 									pos="64"  	topage="11"	/>
+				<PageChange ico="Button\General\Change.png" 		pos="44"  	topage="19"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="11"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+
+	<Page id="12" Title="ManageDHT_C">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="2"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="12"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="3"  	topage="12"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="DHT Settings"	color="D6DA29"/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="8"  	topage="12"	/>
+			<DataShow id="-1003"	font="2" 	fontsize="20"	center="1"	pos="9"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Sensor(s) Connected"/>
+			<PageChange ico="Button\General\UnChange.png"	 		pos="69" 	action="M:S:-"	/>
+				<DataShow id="-990"	font="2" 	fontsize="20"		pos="70"	text=""  color="#D6DA29" />
+				<PageChange ico="Button\General\Change.png" 		pos="71"  	action="M:S:+"	/>
+				<PageChange ico="SensStatus" 						pos="20"  	topage="12"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="21"	text="Type :"/>
+				<DataShow id="-999"	font="2" 	fontsize="20"	center="0"	pos="23"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="0"	pos="24"	text="Pin :"/>
+				<DataShow id="-991"	font="2" 	fontsize="20"	center="0"	pos="25"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="27"	text="Mode :"/>
+				<DataShow id="-992"	font="2" 	fontsize="20"	center="0"	pos="29"	text="" />
+				<PageChange ico="Button\General\Change.png" 				pos="32"  	topage="12"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="33"	text="Timer :"/>
+				<DataShow id="-993"	font="2" 	fontsize="20"	center="0"	pos="35"	text="h" />
+				<DataShow id="-994"	font="2" 	fontsize="20"	center="0"	pos="36"	text="min" />
+				<DataShow id="-995"	font="2" 	fontsize="20"	center="0"	pos="37"	text="s" />
+				<PageChange ico="Button\General\Change.png" 				pos="38"  	topage="12"	/>
+				
+			<PageChange ico="Button\General\Moins.png" 						pos="39"  	topage="14"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="65"	text="Remove | Add"/>
+				<PageChange ico="" 									pos="65"  	topage="12"	/>
+				<PageChange ico="Button\General\Plus.png" 						pos="44"  	topage="15"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="12"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="13" Title="ManageDHT_F">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="7"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="13"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Temperature.png" 	pos="3"  	topage="13"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="DHT Settings"	color="D6DA29"/>
+			<PageChange ico="Button\General\Humidity.png" 		pos="8"  	topage="13"	/>
+			<DataShow id="-1003"	font="2" 	fontsize="20"	center="1"	pos="9"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Sensor(s) Connected"/>
+			<PageChange ico="Button\General\UnChange.png"	 		pos="69" 	action="M:S:-"	/>
+				<DataShow id="-990"	font="2" 	fontsize="20"		pos="70"	text=""  color="#D6DA29" />
+				<PageChange ico="Button\General\Change.png" 		pos="71"  	action="M:S:+"	/>
+				<PageChange ico="SensStatus" 						pos="20"  	topage="13"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="21"	text="Type :"/>
+				<DataShow id="-999"	font="2" 	fontsize="20"	center="0"	pos="23"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="0"	pos="24"	text="Pin :"/>
+				<DataShow id="-991"	font="2" 	fontsize="20"	center="0"	pos="25"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="27"	text="Mode :"/>
+				<DataShow id="-992"	font="2" 	fontsize="20"	center="0"	pos="29"	text="" />
+				<PageChange ico="Button\General\Change.png" 				pos="32"  	topage="13"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="33"	text="Timer :"/>
+				<DataShow id="-993"	font="2" 	fontsize="20"	center="0"	pos="35"	text="h" />
+				<DataShow id="-994"	font="2" 	fontsize="20"	center="0"	pos="36"	text="min" />
+				<DataShow id="-995"	font="2" 	fontsize="20"	center="0"	pos="37"	text="s" />
+				<PageChange ico="Button\General\Change.png" 				pos="38"  	topage="13"	/>
+			<PageChange ico="Button\General\Moins.png" 						pos="39"  	topage="16"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="65"	text="Remove | Add"/>
+				<PageChange ico="" 									pos="65"  	topage="13"	/>
+				<PageChange ico="Button\General\Plus.png" 						pos="44"  	topage="17"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="13"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="14" Title="RemoveSensor_C">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="-1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="14"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Moins.png" 	pos="3"  	topage="14"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="S:R:Set" color="D6DA29"/>
+			<PageChange ico="Button\General\Moins.png" 		pos="8"  	topage="14"	/>
+			<PageChange ico="Button\Control\Alert.png"	pos="78"  	topage="14"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="67"	text="Removing Sensor :"/>
+				<PageChange ico="Button\General\UnChange.png"	 	pos="69" 	action="M:S:-"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="70"	text="S:R:Nb"/>
+				<PageChange ico="Button\General\Change.png"	 		pos="71" 	action="M:S:+"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="72"	text="Pin :"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="74"	text="S:R:Pin"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="76"	text="Is that your Wish ?"/>
+			<PageChange ico="Button\Control\Yes.png"	pos="34"  	action="M:S:Rem"	/>
+			<PageChange ico="Button\Control\No.png"		pos="37"  	topage="-1"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="14"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+			<PageChange ico="Button\General\Moins.png" 		pos="39"  	topage="14"	/>
+			<PageChange ico="Button\General\Moins.png" 	pos="44"  	topage="14"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="15" Title="AddSensor_C">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="-1"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="15"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Plus.png" 	pos="3"  	topage="15"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="S:A:Set" color="D6DA29"/>
+			<PageChange ico="Button\General\Plus.png" 		pos="8"  	topage="15"	/>
+			<PageChange ico="Button\Control\Alert.png"	pos="78"  	topage="15"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="67"	text="Adding Sensor :"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="70"	text="S:A:Nb"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="22"	text="Pin :"/>
+				<PageChange ico="Button\General\UnChange.png"	 	pos="23" 	action="M:S:P:-"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="24"	text="S:A:Pin"/>
+				<PageChange ico="Button\General\Change.png"	 	pos="25" 	action="M:S:P:+"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="76"	text="Is that your Wish ?"/>
+			<PageChange ico="Button\Control\Yes.png"	pos="34"  	action="M:S:Add"	/>
+			<PageChange ico="Button\Control\No.png"		pos="37"  	topage="-1"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="15"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+			<PageChange ico="Button\General\Plus.png" 		pos="39"  	topage="15"	/>
+			<PageChange ico="Button\General\Plus.png" 	pos="44"  	topage="15"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="16" Title="RemoveSensor_F">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="7"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="14"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Moins.png" 	pos="3"  	topage="16"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="S:R:Set" color="D6DA29"/>
+			<PageChange ico="Button\General\Moins.png" 		pos="8"  	topage="16"	/>
+			<PageChange ico="Button\Control\Alert.png"	pos="78"  	topage="16"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="67"	text="Removing Sensor :"/>
+				<PageChange ico="Button\General\UnChange.png"	 	pos="69" 	action="M:S:-"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="70"	text="S:R:Nb"/>
+				<PageChange ico="Button\General\Change.png"	 		pos="71" 	action="M:S:+"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="72"	text="Pin :"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="74"	text="S:R:Pin"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="76"	text="Is that your Wish ?"/>
+			<PageChange ico="Button\Control\Yes.png"	pos="34"  	topage="16"	/>
+			<PageChange ico="Button\Control\No.png"		pos="37"  	topage="16"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="16"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+			<PageChange ico="Button\General\Moins.png" 		pos="39"  	topage="16"	/>
+			<PageChange ico="Button\General\Moins.png" 	pos="44"  	topage="16"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="17" Title="AddSensor_F">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="7"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="17"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Plus.png" 		pos="3"  	topage="17"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="S:A:Set" color="D6DA29"/>
+			<PageChange ico="Button\General\Plus.png" 		pos="8"  	topage="17"	/>
+			<PageChange ico="Button\Control\Alert.png"	pos="78"  	topage="17"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="67"	text="Adding Sensor :"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="70"	text="S:A:Nb"/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="22"	text="Pin :"/>
+				<PageChange ico="Button\General\UnChange.png"	 	pos="23" 	action="M:S:P:-"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="24"	text="S:A:Pin"/>
+				<PageChange ico="Button\General\Change.png"	 	pos="25" 	action="M:S:P:+"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="76"	text="Is that your Wish ?"/>
+			<PageChange ico="Button\Control\Yes.png"	pos="34"  	topage="17"	/>
+			<PageChange ico="Button\Control\No.png"		pos="37"  	topage="17"	/>
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="17"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+			<PageChange ico="Button\General\Plus.png" 		pos="39"  	topage="17"	/>
+			<PageChange ico="Button\General\Plus.png" 		pos="44"  	topage="17"	/>
+		</Objects>
+	</Page>
+
+	<Page id="18" Title="LedMainC">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="10"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="18"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="18"	/>	
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="Led Settings"/>
+				<PageChange ico="" 									pos="49"  	topage="18"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="8"  	topage="18"	/>
+			
+			<Graph id="70" pos="86"/>
+			
+			<PageChange ico="Button\Control\Led_1.png" 			pos="27"  	topage="18"	/>
+				<Slider id="7"	index="1"	pos="80"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:0"/>
+			<PageChange ico="Button\Control\Led_2.png" 			pos="33"  	topage="18"	/>
+				<Slider id="7"	index="2"	pos="81"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:1"/>
+			<PageChange ico="Button\Control\Led_3.png" 			pos="39"  	topage="18"	/>
+				<Slider id="7"	index="3"	pos="82"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:2"/>
+			<PageChange ico="Button\Control\Led_4.png" 			pos="32"  	topage="18"	/>
+				<Slider id="7"	index="4"	pos="83"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:3"/>
+			<PageChange ico="Button\Control\Led_5.png" 			pos="38"  	topage="18"	/>
+				<Slider id="7"	index="5"	pos="84"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:4"/>
+			<PageChange ico="Button\Control\Led_6.png" 			pos="44"  	topage="18"	/>
+				<Slider id="7"	index="6"	pos="85"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:5"/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	action="SL:S:7"	/>
+				<DataShow font="1"	fontsize="12"		pos="45"  	text="Save Personnal Spectrum"	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="19" Title="LedMainF">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="11"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="19"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Season.png"			pos="3"  	topage="19"	/>	
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="Led Settings"/>
+				<PageChange ico="" 									pos="49"  	topage="19"	/>
+			<PageChange ico="Button\General\Light.png" 			pos="8"  	topage="19"	/>
+			
+			<PageChange ico="Button\Control\Led_1.png" 			pos="27"  	topage="19"	/>
+				<Slider id="7"	index="1"	pos="80"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:0"/>
+			<PageChange ico="Button\Control\Led_2.png" 			pos="32"  	topage="19"	/>
+				<Slider id="7"	index="2"	pos="81"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:1"/>
+			<PageChange ico="Button\Control\Led_3.png" 			pos="38"  	topage="19"	/>
+				<Slider id="7"	index="3"	pos="82"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:2"/>
+			<PageChange ico="Button\Control\Led_4.png" 			pos="33"  	topage="19"	/>
+				<Slider id="7"	index="4"	pos="83"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:3"/>
+			<PageChange ico="Button\Control\Led_5.png" 			pos="39"  	topage="19"	/>
+				<Slider id="7"	index="5"	pos="84"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:4"/>				
+			<PageChange ico="Button\Control\Led_6.png" 			pos="44"  	topage="19"	/>
+				<Slider id="7"	index="6"	pos="85"	color1="ABCDEF"	color2="D6DA29"	color3="FEDCBA"	action="SL:7:5"/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	action="SL:S:7"	/>
+				<DataShow font="1"	fontsize="12"		pos="45"  	text="Save Personnal Spectrum"	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="20" Title="ManageLum_C">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="10"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="20"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="0"	/>
+			<PageChange ico="Button\General\Light.png" 	pos="3"  	topage="20"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="Luminosity Settings"	color="D6DA29"/>
+			<PageChange ico="Button\General\Light.png" 		pos="8"  	topage="20"	/>
+			<DataShow id="-1002"	font="2" 	fontsize="20"	center="1"	pos="9"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Sensor(s) Connected"/>
+			<PageChange ico="Button\General\UnChange.png"	 		pos="69" 	action="M:S:-"	/>
+				<DataShow id="-990"	font="2" 	fontsize="20"		pos="70"	text=""  color="#D6DA29" />
+				<PageChange ico="Button\General\Change.png" 		pos="71"  	action="M:S:+"	/>
+				<PageChange ico="SensStatus" 						pos="20"  	topage="20"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="21"	text="Pin :"/>
+				<DataShow id="-991"	font="2" 	fontsize="20"	center="0"	pos="23"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="27"	text="Mode :"/>
+				<DataShow id="-992"	font="2" 	fontsize="20"	center="0"	pos="29"	text="" />
+				<PageChange ico="Button\General\Change.png" 				pos="32"  	topage="20"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="33"	text="Timer :"/>
+				<DataShow id="-993"	font="2" 	fontsize="20"	center="0"	pos="35"	text="h" />
+				<DataShow id="-994"	font="2" 	fontsize="20"	center="0"	pos="36"	text="min" />
+				<DataShow id="-995"	font="2" 	fontsize="20"	center="0"	pos="37"	text="s" />
+				<PageChange ico="Button\General\Change.png" 				pos="38"  	topage="20"	/>
+				
+			<PageChange ico="Button\General\Moins.png" 						pos="39"  	topage="14"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="65"	text="Remove | Add"/>
+				<PageChange ico="" 									pos="65"  	topage="20"	/>
+				<PageChange ico="Button\General\Plus.png" 						pos="44"  	topage="15"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="20"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	
+	<Page id="21" Title="ManageLum_F">
+		<Background img="Background\BackgroundClean.png" width="720" heigth="1134"/>
+		<Objects>
+			<PageChange ico="Button\General\Back.png"	 		pos="0" 	topage="11"	/>
+			<PageChange ico="Logo\Cool.png"						pos="1" 	topage="21"	/>
+			<PageChange ico="Button\General\God.png" 			pos="2"  	topage="5"	/>
+			<PageChange ico="Button\General\Light.png" 	pos="3"  	topage="21"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="49"	text="Luminosity Settings"	color="D6DA29"/>
+			<PageChange ico="Button\General\Light.png" 		pos="8"  	topage="21"	/>
+			<DataShow id="-1002"	font="2" 	fontsize="20"	center="1"	pos="9"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="59"	text="Sensor(s) Connected"/>
+			<PageChange ico="Button\General\UnChange.png"	 		pos="69" 	action="M:S:-"	/>
+				<DataShow id="-990"	font="2" 	fontsize="20"		pos="70"	text=""  color="#D6DA29" />
+				<PageChange ico="Button\General\Change.png" 		pos="71"  	action="M:S:+"	/>
+				<PageChange ico="SensStatus" 						pos="20"  	topage="21"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="21"	text="Pin :"/>
+				<DataShow id="-991"	font="2" 	fontsize="20"	center="0"	pos="23"	text="" />
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="27"	text="Mode :"/>
+				<DataShow id="-992"	font="2" 	fontsize="20"	center="0"	pos="29"	text="" />
+				<PageChange ico="Button\General\Change.png" 				pos="32"  	topage="21"	/>
+			<DataShow 	font="1"	fontsize="20"	center="1"	pos="33"	text="Timer :"/>
+				<DataShow id="-993"	font="2" 	fontsize="20"	center="0"	pos="35"	text="h" />
+				<DataShow id="-994"	font="2" 	fontsize="20"	center="0"	pos="36"	text="min" />
+				<DataShow id="-995"	font="2" 	fontsize="20"	center="0"	pos="37"	text="s" />
+				<PageChange ico="Button\General\Change.png" 				pos="38"  	topage="21"	/>
+				
+			<PageChange ico="Button\General\Moins.png" 						pos="39"  	topage="16"	/>
+				<DataShow 	font="1"	fontsize="20"	center="0"	pos="65"	text="Remove | Add"/>
+				<PageChange ico="" 									pos="65"  	topage="21"	/>
+				<PageChange ico="Button\General\Plus.png" 						pos="44"  	topage="17"	/>
+			
+			<PageChange ico="Button\General\UpdateBar.png" 		pos="45"  	topage="21"	/>
+				<DataShow id="0"	font="1"	fontsize="12"		pos="45"  	text="Last Updated at "	color="D6DA29" />
+			<PageChange ico="GenLightMode" 						pos="46"  	action="L:A"	/>
+			<PageChange ico="GenPumpMode" 						pos="47"  	action="P:A"	/>
+			<PageChange ico="GenFanMode" 						pos="48"  	action="F:A"	/>
+		</Objects>
+	</Page>
+	<!--	-->
+</BiobotApplication>

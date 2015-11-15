@@ -1,0 +1,25 @@
+Avenir Next LT Pro (Condensed)
+ - Chiffres 01_main (27, 83, 15) : 65pt
+ - Petits chiffres et unités de mesure intérieur/extérieur 02_temp, 03_hum, 04_moist, 05_lum : 24pt
+
+Avenir Next LT Pro (Ultra Light Condensed)
+ - Unités de mesure 01_main, 02_temp, 03_hum, 04_moist, 05_lum (°C, %, min) : 65pt
+
+Avenir Next LT Pro (Demi Condensed)
+ - Chiffres 02_temp, 03_hum, 04_lum (chiffre de l'objectif) : 65pt
+
+****************
+
+PAGE LEDs (05_light)
+
+ - Diametre des cercles pour chaque circuit LED (100%) = 248px
+ - Diametre des cercles pour chaque circuit LED (0%) = 40px
+ - Centre des cercles :
+   * top : x = 180px, y = 196px
+   * top left : x = 73px, y = 258px
+   * top right : x = 287px, y = 258px
+   * bottom left : x = 73px, y = 381px
+   * bottom right : x = 287px, y = 381px
+   * bottom : x = 180px, y = 444px 
+   
+   48:45:0:1:10:11:4:0:1:1:1:6:66:73:79:66:79:84:4:1:2:3:4:1:1:255:2:1:6:3:2:2:8:4:0:5:2:0:1:6:0:7:1:9:8:0:0:0
